@@ -49,6 +49,14 @@ const user = "HDB_ADMIN";
 const password = "password";
 ```
 
+#### resources.example.js
+
+This is a [HarperDB Resource File](https://docs.harperdb.io/docs/technical-details/reference/resource). It allows you to override some of the default behaviors of our MQTT server. 
+
+By default, HarperDB looks for a file called `resources.js`, so it's not implementing the modifications in this file. 
+
+If you rename it to `resources.js` and restart HarperDB, it will add the MQTT3.0 `omitCurrent` directive to subscriptions, and only deliver new messages (as opposed to all the messages in the `MQTTTest` table.)
+
 ---
 
 ### Running The Demo
