@@ -4,7 +4,7 @@ This is a template for building [HarperDB](https://www.harperdb.io/) MQTT applic
 
 ---
 
-### Prepare HarperDB
+### Configure HarperDB
 
 Enable MQTT in HarperDB by updating `harperdb-config.yaml` in your `hdb` folder (default: `~/hdb/`): 
 
@@ -19,7 +19,7 @@ mqtt:
 
 ---
 
-### Installing This Application
+### Install Component
 
 Clone this repo into your components folder (default: `~/hdb/components/`).
 
@@ -27,20 +27,19 @@ Enter the folder using your terminal, and install the single dependency from npm
 
 ```npm i -s mqtt```
 
-
 ---
 
-### Configuration
+### Configure Component
 
-There are only two files relevant to this demo:
+While this demo should run out of the box as long as MQTT is enabled (see above), these are the configuration files relevant to the MQTT service:
 
 #### schema.graphql
-The [schema.graphql](./schema.graphql) is the schema definition. This is the main starting point for defining your database schema. In this template, we create a `MQTTTest` table in a `data` database. You can change the name of the table by folowng these directions: 
+The [schema.graphql](./schema.graphql) is the schema definition. This is the main starting point for defining your database schema. In this template, we create a `MQTTTest` table in a `data` database. You can change the name of the table by folowng these directions:
 
 - https://docs.harperdb.io/docs/developers/applications/defining-schemas
 
 #### client.js
-A template NodeJS MQTT client. The configuration is found at the top of the file. Please note that 
+A template NodeJS MQTT client. The configuration is found at the top of the file. Please note that
 
 ```
 const mqttUrl = "mqtts://localhost:8883";
