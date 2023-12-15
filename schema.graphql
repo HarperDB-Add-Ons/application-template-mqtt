@@ -1,0 +1,6 @@
+## Here we can define any tables in our database. This example shows how we define a type as a table using
+## the type name as the table name and specifying it is an "export" available in the REST and other external protocols.
+type MQTTTest @table @export {
+    id: ID @primaryKey # Here we define primary key (must be one)
+    message: String # we can define any other attributes here
+}
