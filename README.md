@@ -50,6 +50,8 @@ const user = "HDB_ADMIN";
 const password = "password";
 ```
 
+---
+
 ### Running The Demo
 
 To publish a message and insert it into the `MQTTTest` table, type the following into a terminal from the project directory:
