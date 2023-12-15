@@ -4,9 +4,9 @@ This is a template for building [HarperDB](https://www.harperdb.io/) MQTT applic
 
 ---
 
-### Prepare HarperDB MQTT
+### Prepare HarperDB
 
-To enable MQTT in HarperDB, update the `harperdb-config.yaml` file in the root of your `hdb` folder (default location `~/hdb/`): 
+Enable MQTT in HarperDB by updating `harperdb-config.yaml` in your `hdb` folder (default: `~/hdb/`): 
 
 ```
 mqtt:
@@ -21,7 +21,7 @@ mqtt:
 
 ### Installing This Application
 
-Clone this repo into your components folder (default `~/hdb/components/`).
+Clone this repo into your components folder (default: `~/hdb/components/`).
 
 Enter the folder using your terminal, and install the single dependency from npm (mqtt):
 
@@ -56,4 +56,14 @@ const password = "password";
 
 To publish a message and insert it into the `MQTTTest` table, type the following into a terminal from the project directory:
 
-```node client.js```
+```
+node client.js
+```
+
+You should see the following output:
+
+```
+published {"id":"294bb1cc-0219-4ad8-9c6f-e09330b13d0e","message":"hi"}
+subscribed [ { topic: 'MQTTTest', qos: 1 } ]
+received {"id":null,"message":"hi"}
+```
